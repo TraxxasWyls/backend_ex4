@@ -174,9 +174,9 @@ else {
   }
 
     // Параметры для подключения
-    $db_user = "u16671"; // Логин БД
-    $db_password = "3137204"; // Пароль БД
-    $db_table = "app"; // Имя Таблицы БД
+    $db_user = "u20983"; // Логин БД
+    $db_password = "3425454"; // Пароль БД
+    $db_table = "ex4"; // Имя Таблицы БД
 
     $name = $_POST['name'];
     $email = $_POST['email'];
@@ -193,7 +193,7 @@ else {
 
     try {
         // Подключение к базе данных
-        $db = new PDO('mysql:host=localhost;dbname=u16671', $db_user, $db_password, array(PDO::ATTR_PERSISTENT => true));
+        $db = new PDO('mysql:host=localhost;dbname=u20983', $db_user, $db_password, array(PDO::ATTR_PERSISTENT => true));
 
         // Создаем запрос в базу данных и записываем его в переменную
         $statement = $db->prepare("INSERT INTO ".$db_table." (name, email, age, sex, limbs, powers, bio) VALUES ('$name','$email',$age,'$sex',$limbs,'$powers_string','$bio')");
