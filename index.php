@@ -198,12 +198,12 @@ else {
         // Создаем запрос в базу данных и записываем его в переменную
         $statement = $db->prepare("INSERT INTO ".$db_table." (name, email, year, sex, limbs, powers, bio) VALUES ('$name','$email',$age,'$sex',$limbs,'$powers_string','$bio')");
 
-        $statement = $db->prepare('INSERT INTO '.$db_table.' (name, email, year, sex, limbs, powers, bio) VALUES (:name, :email, :age, :sex, :limbs, :powers, :bio)');
+        $statement = $db->prepare('INSERT INTO '.$db_table.' (name, email, year, sex, limbs, powers, bio) VALUES (:name, :email, :year, :sex, :limbs, :powers, :bio)');
 
         $statement->execute([
             'name' => $name,
             'email' => $email,
-            'age' => $age,
+            'year' => $age,
             'sex' => $sex,
             'limbs' => $limbs,
             'bio' => $bio,
