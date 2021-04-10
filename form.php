@@ -27,15 +27,21 @@
 					// Далее выводим форму отмечая элементы с ошибками классом error
 					// и задавая начальные значения элементов ранее сохраненными.
 				?>
-				
-					<!-- Поле имени -->
-					<label for="nameInput">Имя </label>
-					<input id="nameInput" name="name" type="text" <?php if ($errors['name']) {print 'class="error"';} ?> value="<?php print $values['name']; ?>" />
-				
-				<!-- Поле Email -->
-				<label for="emailInput">Email </label>
-				<input id="emailInput" name="email" type="email" <?php if ($errors['email']) {print 'class="error"';} ?> value="<?php print $values['email']; ?>" />	
-		<ol>
+				<ol>
+					<li>
+						<label>
+							Имя: <br>
+							<input name="name" <?php if ($errors['name']) {print 'class="error"';} ?> value="<?php print $values['name']; ?>">
+						</label>
+					</li>
+	
+					<li>
+						<label>
+							e-mail: <br> 
+							<input name="email" value="email@mail.ru" type="email"<?php if ($errors['email']) {print 'class="error"';} ?> value="<?php print $values['email']; ?>" >
+						</label>
+					</li>
+	
 					<li>
 						<label for="selectInput">Год рождения</label>
 						<select name="year">

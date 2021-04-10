@@ -13,15 +13,21 @@
 		<div>
 			<h4 id="form"> Форма </h4>
 			<form id="form" action="" method="POST">
-								
-					<!-- Поле имени -->
-					<label for="nameInput">Имя </label>
-					<input id="nameInput" name="name" type="text"  value="" />
-				
-				<!-- Поле Email -->
-				<label for="emailInput">Email </label>
-				<input id="emailInput" name="email" type="email"  value="" />	
-		<ol>
+								<ol>
+					<li>
+						<label>
+							Имя: <br>
+							<input name="name"  value="">
+						</label>
+					</li>
+	
+					<li>
+						<label>
+							e-mail: <br> 
+							<input name="email" value="email@mail.ru" type="email" value="" >
+						</label>
+					</li>
+	
 					<li>
 						<label for="selectInput">Год рождения</label>
 						<select name="year">
@@ -60,7 +66,7 @@
 						<label for="powersSelect">Суперспособности <br>
 						<select id="powersSelect"  name="powers[]" multiple size="4">
 							
-Warning: Invalid argument supplied for foreach() in /Users/savinov/Desktop/University/ex4/backend_ex4/form.php on line 86
+Warning: Invalid argument supplied for foreach() in /Users/savinov/Desktop/University/ex4/backend_ex4/form.php on line 92
 						</select>
 						</label>
 					</li>
