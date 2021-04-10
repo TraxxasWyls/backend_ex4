@@ -28,13 +28,9 @@
 					// и задавая начальные значения элементов ранее сохраненными.
 				?>
 				<ol>
-					<li>
-						<label>
-							Имя: <br>
-							<input name="name" <?php if ($errors['name']) {print 'class="error"';} ?> value="<?php print $values['name']; ?>">
-						</label>
-					</li>
-	
+					<label for="nameInput">Имя </label>
+					<input id="nameInput" name="name" type="text" <?php if ($errors['name']) {print 'class="error"';} ?> value="<?php print $values['name']; ?>" />
+				
 					<li>
 						<label>
 							e-mail: <br> 
